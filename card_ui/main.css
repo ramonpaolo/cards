@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  background: linear-gradient(45deg, red, pink);
+  font-family: "Roboto", sans-serif;
+  background-attachment: fixed;
+  padding: 0;
+  margin: 0;
+}
+.container {
+  position: relative;
+  display: flex;
+  padding: 20px;
+  width: 450px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.container:hover{
+    transform: scale(1.1);
+    transition: 0.7s;
+}
+
+.container .card {
+  position: relative;
+  display: grid;
+  width: 300px;
+  height: 480px;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 20px;
+  /*Shadow do lado direito, baixo, borrão, cor*/
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.2);
+  transition: 0.7s;
+}
+.container .card .circle {
+  padding-top: 0px;
+  margin-top: 0px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  clip-path: circle(180px at center 0);
+  text-align: center;
+}
+.container .card .circle h1 {
+  color: white;
+  font-size: 4.2em;
+}
+.container .card .content {
+  position: relative;
+  text-align: center;
+  font-size: 1.1em;
+  padding: 20px;
+}
+.container .card .content a {
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  display: block;
+  text-decoration: none;
+  background-color: black;
+  border-radius: 20px;
+}
+
+.container:nth-child(1) .card .circle,
+.container .card:nth-child(1) .content a {
+  background: red;
+}
+
+.container:nth-child(2) .card .circle,
+.container:nth-child(2) .card .content a {
+  background: yellow;
+}
+.container:nth-child(3) .card .circle,
+.container:nth-child(3) .card .content a {
+  background: pink;
+}

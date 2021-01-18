@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  padding: 0px;
+  margin: 0px;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.container {
+  animation: scaleDown 0.5s;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  height: 400px;
+  justify-content: center;
+  margin: 20px;
+  padding: 20px;
+  position: relative;
+  transition: 0.5s;
+  width: 300px;
+}
+
+.container:hover {
+  animation: scaleUp 0.7s forwards;
+  transition: 0.7s;
+  transform: scale(1.1);
+}
+
+@keyframes scaleDown {
+  0% {
+    bottom: 30px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    bottom: 0px;
+  }
+  100% {
+    bottom: 20px;
+  }
+}
+
+.container .card {
+  background: linear-gradient(45deg, blue, purple);
+  border-radius: 20px;
+  box-shadow: 8px 8px 6px rgba(0, 0, 0, 0.23);
+  color: white;
+  display: grid;
+  overflow: hidden;
+  padding: 40px;
+  width: 300px;
+  height: 340px;
+  position: relative;
+}
+
+.container .card h1 {
+  font-size: 3em;
+  text-align: center;
+}
+
+.container .card p {
+  font-size: 1em;
+}
+
+.container .card a {
+  border: 1px solid white;
+  border-radius: 40px;
+  color: white;
+  font-size: 1.3em;
+  padding: 10px;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.7s;
+}
+.container .card a:hover {
+  transition: 0.7s;
+  transform: scale(1.1);
+}
