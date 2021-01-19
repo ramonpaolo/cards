@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  background-color: lightblue;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  animation: backgroundcolor 0.7s forwards ease;
+  background-color: pink;
+  box-shadow: 5px 4px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  clip-path: circle(35% at 50% 0%);
+  height: 230px;
+  transition: 0.7s;
+  margin: 90px;
+  width: 300px;
+}
+.container:hover {
+  animation: backgroundcolorhover 0.7s forwards ease;
+}
+
+.container .card {
+  display: inline;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+}
+
+.container .card h1 {
+  bottom: 12px;
+  font-size: 2em;
+  position: relative;
+}
+
+.container .card p {
+  color: white;
+  font-size: 1em;
+}
+
+@keyframes backgroundcolorhover {
+  0% {
+    clip-path: circle(35% at 50% 0%);
+  }
+  100% {
+    clip-path: circle(100% at 50% 10%);
+    transform: scale(1.2);
+  }
+}
+@keyframes backgroundcolor {
+  0% {
+    clip-path: circle(100% at 50% 10%);
+    transform: scale(1.2);
+  }
+  100% {
+    clip-path: circle(35% at 50% 0%);
+    transform: scale(1);
+  }
+}
